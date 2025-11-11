@@ -529,6 +529,21 @@ section {
 .service-icon {
     font-size: 50px;
     margin-bottom: 20px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon img {
+    transform: scale(1.1);
 }
 
 .service-card h3 {
@@ -843,6 +858,14 @@ section {
     align-items: center;
     justify-content: center;
     font-size: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .testimonial-info h4 {
