@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="横浜エリアの賃貸物件一覧。マンション、アパート、一戸建て、ペット可物件など豊富な賃貸物件をご紹介。">
+    <title>賃貸物件一覧 - 株式会社ライフエステート</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-contact">
+                        <span class="header-phone">📞 045-678-9012</span>
+                        <span class="header-hours">営業時間：9:30〜18:30（定休日：水曜日・第2第4火曜日）</span>
+                    </div>
+                    <div class="header-buttons">
+                        <a href="contact.html" class="btn-contact-mini">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>Life Estate</h1>
+                            <p>ライフエステート</p>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="メニュー">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle">物件を探す</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="properties-sale.html">購入物件</a></li>
+                                <li><a href="properties-rent.html">賃貸物件</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="staff.html">スタッフ紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- パンくずリスト -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">ホーム</a> > <span>賃貸物件一覧</span>
+        </div>
+    </div>
+
+    <!-- ページヘッダー -->
+    <section class="page-header">
+        <div class="container">
+            <h1>賃貸物件一覧</h1>
+            <p>約3,500件の豊富な物件から理想の住まいが見つかります</p>
+        </div>
+    </section>
+
+    <!-- 検索フィルター -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-box">
+                <h3>条件で絞り込む</h3>
+                <form class="filter-form">
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label>物件種別</label>
+                            <select class="filter-input">
+                                <option value="">すべて</option>
+                                <option value="マンション">賃貸マンション</option>
+                                <option value="アパート">賃貸アパート</option>
+                                <option value="一戸建て">一戸建て賃貸</option>
+                                <option value="デザイナーズ">デザイナーズ</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>エリア</label>
+                            <select class="filter-input">
+                                <option value="">すべて</option>
+                                <option value="西区">横浜市西区</option>
+                                <option value="中区">横浜市中区</option>
+                                <option value="青葉区">横浜市青葉区</option>
+                                <option value="川崎市">川崎市</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>家賃</label>
+                            <select class="filter-input">
+                                <option value="">すべて</option>
+                                <option value="1">〜8万円</option>
+                                <option value="2">8万円〜12万円</option>
+                                <option value="3">12万円〜15万円</option>
+                                <option value="4">15万円〜</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>間取り</label>
+                            <select class="filter-input">
+                                <option value="">すべて</option>
+                                <option value="1">1R・1K</option>
+                                <option value="2">1DK・1LDK</option>
+                                <option value="3">2DK・2LDK</option>
+                                <option value="4">3LDK以上</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label>
+                                <input type="checkbox" name="pet">
+                                ペット可
+                            </label>
+                        </div>
+                        <div class="filter-group">
+                            <label>
+                                <input type="checkbox" name="new">
+                                新築・築浅
+                            </label>
+                        </div>
+                        <div class="filter-group">
+                            <label>
+                                <input type="checkbox" name="autolock">
+                                オートロック
+                            </label>
+                        </div>
+                        <div class="filter-group">
+                            <label>
+                                <input type="checkbox" name="parking">
+                                駐車場あり
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-actions">
+                        <button type="submit" class="btn btn-primary">検索する</button>
+                        <button type="reset" class="btn btn-outline">クリア</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 物件一覧 -->
+    <section class="properties-list">
+        <div class="container">
+            <div class="list-header">
+                <p class="result-count">全<strong>3</strong>件の物件が見つかりました</p>
+                <div class="sort-options">
+                    <select class="sort-select">
+                        <option value="new">新着順</option>
+                        <option value="price-low">家賃の安い順</option>
+                        <option value="price-high">家賃の高い順</option>
+                        <option value="area-large">面積の広い順</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="properties-grid">
+                <!-- 物件1: グランメゾン横浜 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80" alt="グランメゾン横浜">
+                        <button class="property-favorite" aria-label="お気に入り">♡</button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-category rent">賃貸マンション</div>
+                        <h3 class="property-title">グランメゾン横浜</h3>
+                        <p class="property-location">📍 横浜市西区北幸2丁目</p>
+
+                        <div class="property-details">
+                            <span>2LDK</span>
+                            <span>55.40㎡</span>
+                            <span>築5年</span>
+                            <span>8階/12階建</span>
+                        </div>
+
+                        <div class="property-features">
+                            <span class="feature-tag">オートロック</span>
+                            <span class="feature-tag">宅配ボックス</span>
+                            <span class="feature-tag">ネット無料</span>
+                            <span class="feature-tag">浴室乾燥機</span>
+                        </div>
+
+                        <div class="property-transport">
+                            🚃 JR「横浜駅」徒歩7分
+                        </div>
+
+                        <div class="property-info-row">
+                            <span>敷金: 1ヶ月</span>
+                            <span>礼金: 1ヶ月</span>
+                        </div>
+
+                        <div class="property-price">
+                            12万円 <span class="price-unit">/ 月</span>
+                            <span class="management-fee">管理費 8,000円</span>
+                        </div>
+
+                        <div class="property-actions">
+                            <button class="btn btn-detail">詳細を見る</button>
+                            <button class="btn btn-contact">お問い合わせ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 物件2: アトリエみなとみらい -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="アトリエみなとみらい">
+                        <div class="property-badge special">礼金ゼロ</div>
+                        <button class="property-favorite" aria-label="お気に入り">♡</button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-category rent">デザイナーズマンション</div>
+                        <h3 class="property-title">アトリエみなとみらい</h3>
+                        <p class="property-location">📍 横浜市西区みなとみらい3丁目</p>
+
+                        <div class="property-details">
+                            <span>1LDK</span>
+                            <span>42.50㎡</span>
+                            <span>築3年</span>
+                            <span>6階/8階建</span>
+                        </div>
+
+                        <div class="property-features">
+                            <span class="feature-tag">デザイナーズ</span>
+                            <span class="feature-tag">床暖房</span>
+                            <span class="feature-tag">WiFi無料</span>
+                            <span class="feature-tag">追い焚き</span>
+                        </div>
+
+                        <div class="property-transport">
+                            🚃 みなとみらい線「みなとみらい駅」徒歩3分
+                        </div>
+
+                        <div class="property-info-row">
+                            <span>敷金: 1ヶ月</span>
+                            <span class="highlight">礼金: 0ヶ月</span>
+                        </div>
+
+                        <div class="property-price">
+                            9.8万円 <span class="price-unit">/ 月</span>
+                            <span class="management-fee">管理費 6,000円</span>
+                        </div>
+
+                        <div class="property-actions">
+                            <button class="btn btn-detail">詳細を見る</button>
+                            <button class="btn btn-contact">お問い合わせ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 物件3: ペットパラダイス関内 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=600&q=80" alt="ペットパラダイス関内">
+                        <div class="property-badge pet">ペット可</div>
+                        <button class="property-favorite" aria-label="お気に入り">♡</button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-category rent">賃貸マンション</div>
+                        <h3 class="property-title">ペットパラダイス関内</h3>
+                        <p class="property-location">📍 横浜市中区相生町</p>
+
+                        <div class="property-details">
+                            <span>2LDK</span>
+                            <span>60.20㎡</span>
+                            <span>築7年</span>
+                            <span>3階/7階建</span>
+                        </div>
+
+                        <div class="property-features">
+                            <span class="feature-tag">ペット可</span>
+                            <span class="feature-tag">足洗い場</span>
+                            <span class="feature-tag">防音性高</span>
+                            <span class="feature-tag">WIC</span>
+                        </div>
+
+                        <div class="property-transport">
+                            🚃 JR根岸線「関内駅」徒歩5分
+                        </div>
+
+                        <div class="property-info-row">
+                            <span>敷金: 2ヶ月</span>
+                            <span>礼金: 1ヶ月</span>
+                        </div>
+
+                        <div class="property-pet-info">
+                            🐕 小型犬・中型犬2匹まで、猫2匹まで可
+                        </div>
+
+                        <div class="property-price">
+                            10.5万円 <span class="price-unit">/ 月</span>
+                            <span class="management-fee">管理費 5,000円</span>
+                        </div>
+
+                        <div class="property-actions">
+                            <button class="btn btn-detail">詳細を見る</button>
+                            <button class="btn btn-contact">お問い合わせ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 賃貸サービスCTA -->
+    <section class="services-cta">
+        <div class="container">
+            <div class="services-cta-content">
+                <h2>賃貸契約サポート</h2>
+                <div class="services-cta-grid">
+                    <div class="service-cta-item">
+                        <div class="service-cta-icon">💡</div>
+                        <h3>初期費用相談</h3>
+                        <p>初期費用を抑えたプランもご提案</p>
+                    </div>
+                    <div class="service-cta-item">
+                        <div class="service-cta-icon">📱</div>
+                        <h3>オンライン内見</h3>
+                        <p>遠方の方もオンラインで内見可能</p>
+                    </div>
+                    <div class="service-cta-item">
+                        <div class="service-cta-icon">🏢</div>
+                        <h3>法人契約対応</h3>
+                        <p>法人様の社宅・事務所探しも対応</p>
+                    </div>
+                    <div class="service-cta-item">
+                        <div class="service-cta-icon">⚡</div>
+                        <h3>スピード対応</h3>
+                        <p>お急ぎの方も迅速に対応します</p>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 30px;">
+                    <a href="contact.html" class="btn btn-primary">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>株式会社ライフエステート</h3>
+                    <p>〒231-0023<br>神奈川県横浜市中区山下町25-2<br>インペリアルビル3F</p>
+                    <p>TEL: 045-678-9012<br>営業時間：9:30〜18:30<br>定休日：水曜日・第2第4火曜日</p>
+                </div>
+                <div class="footer-section">
+                    <h4>物件を探す</h4>
+                    <ul>
+                        <li><a href="properties-sale.html">購入物件</a></li>
+                        <li><a href="properties-rent.html">賃貸物件</a></li>
+                        <li><a href="assessment.html">売却査定</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="service-sale.html">売買仲介</a></li>
+                        <li><a href="service-rent.html">賃貸仲介</a></li>
+                        <li><a href="service-management.html">不動産管理</a></li>
+                        <li><a href="service-reform.html">リフォーム・リノベーション</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="staff.html">スタッフ紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-license">
+                    宅地建物取引業 神奈川県知事（3）第28765号<br>
+                    賃貸住宅管理業 国土交通大臣（1）第09876号
+                </p>
+                <p class="footer-copyright">&copy; 2025 Life Estate Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

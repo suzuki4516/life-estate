@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="株式会社ライフエステートへのお問い合わせ。お電話、メール、来店予約など、お気軽にご連絡ください。">
+    <title>お問い合わせ - 株式会社ライフエステート</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-contact">
+                        <span class="header-phone">📞 045-678-9012</span>
+                        <span class="header-hours">営業時間：9:30〜18:30（定休日：水曜日・第2第4火曜日）</span>
+                    </div>
+                    <div class="header-buttons">
+                        <a href="contact.html" class="btn-contact-mini">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>Life Estate</h1>
+                            <p>ライフエステート</p>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="メニュー">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle">物件を探す</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="properties-sale.html">購入物件</a></li>
+                                <li><a href="properties-rent.html">賃貸物件</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="staff.html">スタッフ紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- パンくずリスト -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">ホーム</a> > <span>お問い合わせ</span>
+        </div>
+    </div>
+
+    <!-- ページヘッダー -->
+    <section class="page-header">
+        <div class="container">
+            <h1>お問い合わせ</h1>
+            <p>お気軽にご相談ください。スタッフ一同お待ちしております</p>
+        </div>
+    </section>
+
+    <!-- お問い合わせ方法 -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="contact-methods-grid">
+                <div class="contact-method-card">
+                    <div class="contact-method-icon">📞</div>
+                    <h3>お電話でのお問い合わせ</h3>
+                    <p class="contact-method-number">045-678-9012</p>
+                    <p class="contact-method-hours">営業時間：9:30〜18:30<br>定休日：水曜日・第2第4火曜日</p>
+                    <a href="tel:0456789012" class="btn btn-primary">電話をかける</a>
+                </div>
+
+                <div class="contact-method-card">
+                    <div class="contact-method-icon">✉️</div>
+                    <h3>メールでのお問い合わせ</h3>
+                    <p class="contact-method-email">info@life-estate.co.jp</p>
+                    <p class="contact-method-note">24時間受付中<br>2営業日以内にご返信いたします</p>
+                    <a href="mailto:info@life-estate.co.jp" class="btn btn-primary">メールを送る</a>
+                </div>
+
+                <div class="contact-method-card">
+                    <div class="contact-method-icon">💬</div>
+                    <h3>LINEでのお問い合わせ</h3>
+                    <p class="contact-method-line">公式LINEアカウント</p>
+                    <p class="contact-method-note">24時間受付中<br>気軽に質問できます</p>
+                    <a href="#" class="btn btn-primary">LINE友だち追加</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせフォーム -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="section-title">お問い合わせフォーム</h2>
+                <p class="form-description">以下のフォームに必要事項をご記入の上、送信してください。<br>
+                <span class="required-note">*</span>は必須項目です。</p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="inquiry-type">お問い合わせ種別 <span class="required">*</span></label>
+                        <select id="inquiry-type" name="inquiry-type" required>
+                            <option value="">選択してください</option>
+                            <option value="購入">物件購入について</option>
+                            <option value="賃貸">賃貸物件について</option>
+                            <option value="売却">物件売却について</option>
+                            <option value="管理">不動産管理について</option>
+                            <option value="リフォーム">リフォーム・リノベーションについて</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="kana">フリガナ <span class="required">*</span></label>
+                            <input type="text" id="kana" name="kana" placeholder="ヤマダ タロウ" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話番号 <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="090-1234-5678" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">ご住所</label>
+                        <input type="text" id="address" name="address" placeholder="横浜市中区〇〇町">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="希望エリア">ご希望エリア</label>
+                        <input type="text" id="area" name="area" placeholder="横浜市西区、みなとみらい など">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">ご予算</label>
+                        <select id="budget" name="budget">
+                            <option value="">選択してください</option>
+                            <option value="〜3000万">〜3,000万円</option>
+                            <option value="3000-5000万">3,000万円〜5,000万円</option>
+                            <option value="5000-8000万">5,000万円〜8,000万円</option>
+                            <option value="8000万〜">8,000万円〜</option>
+                            <option value="賃貸〜10万">賃貸 〜10万円/月</option>
+                            <option value="賃貸10-15万">賃貸 10万円〜15万円/月</option>
+                            <option value="賃貸15万〜">賃貸 15万円〜/月</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ご希望の連絡方法</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="contact-method" value="電話"> 電話</label>
+                            <label><input type="checkbox" name="contact-method" value="メール"> メール</label>
+                            <label><input type="checkbox" name="contact-method" value="LINE"> LINE</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ご希望の連絡時間帯</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="time-slot" value="午前"> 午前（9:30〜12:00）</label>
+                            <label><input type="checkbox" name="time-slot" value="午後"> 午後（13:00〜16:00）</label>
+                            <label><input type="checkbox" name="time-slot" value="夕方"> 夕方（16:00〜18:30）</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group privacy-policy">
+                        <label>
+                            <input type="checkbox" name="privacy" required>
+                            <a href="#" target="_blank">プライバシーポリシー</a>に同意する <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-submit">送信する</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 来店予約 -->
+    <section class="visit-reservation">
+        <div class="container">
+            <div class="visit-box">
+                <h2>来店予約でスムーズなご相談</h2>
+                <p>ご来店のご予約をいただくと、お待たせすることなくスムーズにご相談いただけます。</p>
+                <div class="visit-benefits">
+                    <div class="visit-benefit">
+                        <span class="benefit-icon">⏰</span>
+                        <span>お待たせしません</span>
+                    </div>
+                    <div class="visit-benefit">
+                        <span class="benefit-icon">👨‍💼</span>
+                        <span>専任スタッフが対応</span>
+                    </div>
+                    <div class="visit-benefit">
+                        <span class="benefit-icon">🎁</span>
+                        <span>QUOカード1,000円分プレゼント</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary">来店予約をする</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 初期費用はどのくらいかかりますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>賃貸の場合、一般的に家賃の4〜5ヶ月分程度です。物件により異なりますので、詳しくはご相談ください。購入の場合は、物件価格の他に諸費用として物件価格の6〜10%程度が必要となります。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 住宅ローンの審査に不安があります</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>当社の住宅ローンアドバイザーが、お客様の状況に応じた金融機関をご紹介し、審査通過までサポートいたします。事前審査も無料で承りますので、お気軽にご相談ください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 遠方に住んでいますが、物件を見ることはできますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>オンライン内見やビデオ通話での物件案内も対応しております。また、写真や動画での物件紹介も可能です。お気軽にご相談ください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 仲介手数料はいくらですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>法定上限の範囲内でいただいております。売買の場合は「物件価格×3%+6万円+消費税」が一般的です。賃貸の場合は「家賃1ヶ月分+消費税」が上限となります。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 物件の見学は予約が必要ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、事前にご予約をお願いしております。お電話やメール、LINEで簡単にご予約いただけます。ご希望の日時をお知らせください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. ペットを飼っていますが、物件はありますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ペット可物件も多数取り扱っております。小型犬・猫から中型犬まで対応可能な物件がございます。ペットの種類や頭数に応じてご提案させていただきます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 店舗情報 -->
+    <section class="contact-offices">
+        <div class="container">
+            <h2 class="section-title">各店舗へのアクセス</h2>
+            <div class="contact-offices-grid">
+                <div class="contact-office-card">
+                    <h3>横浜関内店（本店）</h3>
+                    <p class="office-address">〒231-0023<br>神奈川県横浜市中区山下町25-2 インペリアルビル3F</p>
+                    <p class="office-tel">📞 045-678-9012</p>
+                    <p class="office-access">🚃 JR根岸線「関内駅」南口より徒歩3分</p>
+                </div>
+
+                <div class="contact-office-card">
+                    <h3>横浜駅西口店</h3>
+                    <p class="office-address">横浜市西区北幸1-1-1 横浜駅西口ビル2F</p>
+                    <p class="office-tel">📞 045-XXX-XXXX</p>
+                    <p class="office-access">🚃 JR・私鉄各線「横浜駅」西口より徒歩2分</p>
+                </div>
+
+                <div class="contact-office-card">
+                    <h3>みなとみらい店</h3>
+                    <p class="office-address">横浜市西区みなとみらい2-2-1 ランドマークタワー1F</p>
+                    <p class="office-tel">📞 045-XXX-XXXX</p>
+                    <p class="office-access">🚃 みなとみらい線「みなとみらい駅」直結</p>
+                </div>
+
+                <div class="contact-office-card">
+                    <h3>新横浜店</h3>
+                    <p class="office-address">横浜市港北区新横浜2-5-10 新横浜ビル1F</p>
+                    <p class="office-tel">📞 045-XXX-XXXX</p>
+                    <p class="office-access">🚃 JR・地下鉄「新横浜駅」北口より徒歩1分</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>株式会社ライフエステート</h3>
+                    <p>〒231-0023<br>神奈川県横浜市中区山下町25-2<br>インペリアルビル3F</p>
+                    <p>TEL: 045-678-9012<br>営業時間：9:30〜18:30<br>定休日：水曜日・第2第4火曜日</p>
+                </div>
+                <div class="footer-section">
+                    <h4>物件を探す</h4>
+                    <ul>
+                        <li><a href="properties-sale.html">購入物件</a></li>
+                        <li><a href="properties-rent.html">賃貸物件</a></li>
+                        <li><a href="assessment.html">売却査定</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="service-sale.html">売買仲介</a></li>
+                        <li><a href="service-rent.html">賃貸仲介</a></li>
+                        <li><a href="service-management.html">不動産管理</a></li>
+                        <li><a href="service-reform.html">リフォーム・リノベーション</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="staff.html">スタッフ紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-license">
+                    宅地建物取引業 神奈川県知事（3）第28765号<br>
+                    賃貸住宅管理業 国土交通大臣（1）第09876号
+                </p>
+                <p class="footer-copyright">&copy; 2025 Life Estate Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

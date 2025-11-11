@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="不動産の売却査定は株式会社ライフエステートへ。無料で査定いたします。">
+    <title>売却査定 - 株式会社ライフエステート</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-contact">
+                        <span class="header-phone">📞 045-678-9012</span>
+                        <span class="header-hours">営業時間：9:30〜18:30（定休日：水曜日・第2第4火曜日）</span>
+                    </div>
+                    <div class="header-buttons">
+                        <a href="contact.html" class="btn-contact-mini">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>Life Estate</h1>
+                            <p>ライフエステート</p>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="メニュー">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle">物件を探す</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="properties-sale.html">購入物件</a></li>
+                                <li><a href="properties-rent.html">賃貸物件</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="staff.html">スタッフ紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- パンくずリスト -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">ホーム</a> > <span>売却査定</span>
+        </div>
+    </div>
+
+    <!-- ページヘッダー -->
+    <section class="page-header">
+        <div class="container">
+            <h1>無料売却査定</h1>
+            <p>お持ちの不動産を無料で査定いたします</p>
+        </div>
+    </section>
+
+    <!-- 査定のメリット -->
+    <section class="assessment-benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>完全無料</h3>
+                    <p>査定は完全無料。お気軽にご依頼ください。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>スピード査定</h3>
+                    <p>最短24時間で査定結果をご報告いたします。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>詳細レポート</h3>
+                    <p>市場動向を踏まえた詳細な査定レポートを提供。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>専門スタッフ対応</h3>
+                    <p>経験豊富なスタッフが丁寧にサポートします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 査定フォーム -->
+    <section class="assessment-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="section-title">売却査定フォーム</h2>
+                <p class="form-description">以下のフォームに必要事項をご記入の上、送信してください。<br>
+                <span class="required-note">*</span>は必須項目です。</p>
+
+                <form class="assessment-form" id="assessmentForm">
+                    <div class="form-section-title">物件情報</div>
+
+                    <div class="form-group">
+                        <label for="property-type">物件種別 <span class="required">*</span></label>
+                        <select id="property-type" name="property-type" required>
+                            <option value="">選択してください</option>
+                            <option value="一戸建て">一戸建て</option>
+                            <option value="マンション">マンション</option>
+                            <option value="土地">土地</option>
+                            <option value="アパート">アパート・収益物件</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="property-address">物件所在地 <span class="required">*</span></label>
+                        <input type="text" id="property-address" name="property-address" placeholder="例：神奈川県横浜市中区山下町123" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="land-area">土地面積</label>
+                            <input type="text" id="land-area" name="land-area" placeholder="例：100㎡">
+                        </div>
+                        <div class="form-group">
+                            <label for="building-area">建物面積</label>
+                            <input type="text" id="building-area" name="building-area" placeholder="例：80㎡">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="floor-plan">間取り</label>
+                            <select id="floor-plan" name="floor-plan">
+                                <option value="">選択してください</option>
+                                <option value="1R・1K">1R・1K</option>
+                                <option value="1DK・1LDK">1DK・1LDK</option>
+                                <option value="2DK・2LDK">2DK・2LDK</option>
+                                <option value="3DK・3LDK">3DK・3LDK</option>
+                                <option value="4LDK以上">4LDK以上</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="building-age">築年数</label>
+                            <input type="text" id="building-age" name="building-age" placeholder="例：15年">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desired-price">売却希望価格</label>
+                        <select id="desired-price" name="desired-price">
+                            <option value="">選択してください</option>
+                            <option value="〜1000万">〜1,000万円</option>
+                            <option value="1000-3000万">1,000万円〜3,000万円</option>
+                            <option value="3000-5000万">3,000万円〜5,000万円</option>
+                            <option value="5000-8000万">5,000万円〜8,000万円</option>
+                            <option value="8000万〜">8,000万円〜</option>
+                            <option value="未定">未定・相談したい</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sale-reason">売却理由</label>
+                        <select id="sale-reason" name="sale-reason">
+                            <option value="">選択してください</option>
+                            <option value="住み替え">住み替え</option>
+                            <option value="相続">相続</option>
+                            <option value="転勤">転勤</option>
+                            <option value="離婚">離婚</option>
+                            <option value="資金調達">資金調達</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sale-timing">売却希望時期</label>
+                        <select id="sale-timing" name="sale-timing">
+                            <option value="">選択してください</option>
+                            <option value="すぐにでも">すぐにでも</option>
+                            <option value="3ヶ月以内">3ヶ月以内</option>
+                            <option value="半年以内">半年以内</option>
+                            <option value="1年以内">1年以内</option>
+                            <option value="未定">未定・良い条件があれば</option>
+                        </select>
+                    </div>
+
+                    <div class="form-section-title">お客様情報</div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="kana">フリガナ <span class="required">*</span></label>
+                            <input type="text" id="kana" name="kana" placeholder="ヤマダ タロウ" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話番号 <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="090-1234-5678" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">その他ご要望・ご質問</label>
+                        <textarea id="message" name="message" rows="5" placeholder="ご質問やご要望などございましたらご記入ください"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ご希望の連絡方法</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="contact-method" value="電話"> 電話</label>
+                            <label><input type="checkbox" name="contact-method" value="メール"> メール</label>
+                            <label><input type="checkbox" name="contact-method" value="LINE"> LINE</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ご希望の連絡時間帯</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="time-slot" value="午前"> 午前（9:30〜12:00）</label>
+                            <label><input type="checkbox" name="time-slot" value="午後"> 午後（13:00〜16:00）</label>
+                            <label><input type="checkbox" name="time-slot" value="夕方"> 夕方（16:00〜18:30）</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group privacy-policy">
+                        <label>
+                            <input type="checkbox" name="privacy" required>
+                            <a href="#" target="_blank">プライバシーポリシー</a>に同意する <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-submit">査定を依頼する</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 査定の流れ -->
+    <section class="assessment-flow">
+        <div class="container">
+            <h2 class="section-title">査定の流れ</h2>
+            <div class="flow-grid">
+                <div class="flow-step">
+                    <div class="flow-number">STEP 1</div>
+                    <div class="flow-icon">📝</div>
+                    <h3>査定依頼</h3>
+                    <p>フォームまたはお電話で査定をご依頼ください</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="flow-number">STEP 2</div>
+                    <div class="flow-icon">🏠</div>
+                    <h3>物件調査</h3>
+                    <p>担当者が物件を確認し、詳細な調査を実施します</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="flow-number">STEP 3</div>
+                    <div class="flow-icon">📊</div>
+                    <h3>査定結果のご報告</h3>
+                    <p>市場動向を踏まえた査定価格をご提示します</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="flow-number">STEP 4</div>
+                    <div class="flow-icon">✅</div>
+                    <h3>売却活動開始</h3>
+                    <p>ご納得いただければ売却活動を開始します</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">売却査定に関するよくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 査定は本当に無料ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、査定は完全無料です。査定後に売却されなくても費用は一切かかりません。お気軽にご依頼ください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 査定にはどのくらい時間がかかりますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>簡易査定は最短24時間でご報告可能です。より詳細な訪問査定の場合は、現地調査後3〜5営業日でご報告いたします。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 査定額で必ず売却しなければなりませんか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>いいえ、査定額はあくまで参考価格です。売却するかどうかはお客様の自由です。査定後にじっくりご検討ください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 住宅ローンが残っていても売却できますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、住宅ローンが残っていても売却可能です。売却代金でローンを完済する方法や、買い替えローンなど、お客様の状況に応じた最適な方法をご提案いたします。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 古い物件でも査定してもらえますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>もちろん可能です。築年数が古い物件でも、立地や周辺環境によって価値がある場合もあります。また、リフォームのご提案も可能です。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Q. 相続した物件でも査定できますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、相続物件の査定も承ります。相続診断士も在籍しておりますので、相続に関するご相談も併せてお受けできます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>お電話でのご相談も承ります</h2>
+                <p>査定に関するご質問やご相談は、お気軽にお電話ください</p>
+                <div class="cta-buttons">
+                    <a href="tel:0456789012" class="btn btn-cta-primary">📞 045-678-9012</a>
+                    <a href="contact.html" class="btn btn-cta-secondary">お問い合わせフォーム</a>
+                </div>
+                <p class="cta-note">営業時間：9:30〜18:30（定休日：水曜日・第2第4火曜日）</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>株式会社ライフエステート</h3>
+                    <p>〒231-0023<br>神奈川県横浜市中区山下町25-2<br>インペリアルビル3F</p>
+                    <p>TEL: 045-678-9012<br>営業時間：9:30〜18:30<br>定休日：水曜日・第2第4火曜日</p>
+                </div>
+                <div class="footer-section">
+                    <h4>物件を探す</h4>
+                    <ul>
+                        <li><a href="properties-sale.html">購入物件</a></li>
+                        <li><a href="properties-rent.html">賃貸物件</a></li>
+                        <li><a href="assessment.html">売却査定</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="service-sale.html">売買仲介</a></li>
+                        <li><a href="service-rent.html">賃貸仲介</a></li>
+                        <li><a href="service-management.html">不動産管理</a></li>
+                        <li><a href="service-reform.html">リフォーム・リノベーション</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="staff.html">スタッフ紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-license">
+                    宅地建物取引業 神奈川県知事（3）第28765号<br>
+                    賃貸住宅管理業 国土交通大臣（1）第09876号
+                </p>
+                <p class="footer-copyright">&copy; 2025 Life Estate Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
